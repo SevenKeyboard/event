@@ -16,8 +16,8 @@ class VersionManager_Event
 }
 class Event
 {
-    __new()    {
-        this.handle := dllCall("Kernel32.dll\CreateEvent", "Ptr",0, "Int",0, "Int",0, "Ptr",0, "Ptr")
+    __new(eventAttributes := 0, manualReset := 0, initialState := 0, name := 0)    {
+        this.handle := dllCall("Kernel32.dll\CreateEvent", "Ptr",eventAttributes, "Int",manualReset, "Int",initialState, "Ptr",name, "Ptr")
     }
     set()    {
         dllCall("Kernel32.dll\SetEvent", "Ptr",this.handle)
