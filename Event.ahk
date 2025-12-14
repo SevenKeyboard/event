@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v1.0.0+
+﻿#Requires AutoHotkey v1.1.0+
 ;==============================================================
 ; Event — Simple wrapper for Win32 manual reset event handle
 ;
